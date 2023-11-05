@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>The Life Of Anakin Skywalker</title>
+            <meta charset="UTF-8"/>
+            <meta name="description" content="A page about Anakin Skywalkers life.">
+            <link href="styles.css" rel="stylesheet" type="text/css">
+        </head>
+
+        <body>
+            <div class="pagebox">
+            <header><h1>The Tragedy of Anakin Skywalker</h1></header>
+
+            <nav>
+                <div class="topnav">
+                    <a class="current" href="index.html">Home</a>
+                    <a href="#">Content</a>
+                    <a href="#">About Us</a>
+                </div>
+            </nav>
+
+            <article>
+                <section>
+                    <h2>Anakin Skywalker</h2>
+                    <p>
+                        <img class="anakinskywalker" src="images/anakinskywalker.jpg" alt="Picture of Anakin Skywalker.">
+                        Anakin was born on the desert planet of Tatooine and was discovered by Jedi Master Qui-Gon Jinn and his apprentice Obi-Wan Kenobi. He was identified as a Force-sensitive child with exceptional potential. Anakin was trained as a Jedi by Obi-Wan Kenobi. He exhibited remarkable skills with piloting and lightsaber combat, which made him a talented Jedi. However, he also struggled with his emotions and attachment, which were discouraged by the Jedi Order.  
+                        Anakin was a skilled podracer, and his talents in podracing helped him gain recognition and attention.  Anakin fell in love with Padmé Amidala, Queen and later Senator of Naboo. Their secret relationship eventually led to their marriage, which violated Jedi rules on attachment. 
+                        Anakin played a crucial role in the Clone Wars, a galaxy-wide conflict between the Galactic Republic and the Separatists. He became a war hero and was known for his daring actions on the battlefield. Throughout his life, Anakin struggled with his fear, anger, and the desire for power. He was manipulated by the Sith Lord Darth Sidious (Emperor Palpatine), who promised him the power to save his loved ones from death. 
+                        Anakin's fears and anger ultimately led him to the dark side. He turned against the Jedi Order, helping Sidious execute Order 66, which resulted in the near-extermination of the Jedi. Anakin took on the Sith name Darth Vader.
+                    </p>
+                    <hr/>
+                </section>
+
+                <section>
+                    <h2>Darth Vader</h2>
+                    <p>
+                        <img class="darthvader" src="images/darthvader.jpg" alt="Picture of Darth Vader">
+                        After turning to the dark side of the Force and adopting the name Darth Vader, Anakin became the apprentice of Emperor Palpatine (Darth Sidious). He fully embraced the dark side's teachings, including anger, hatred, and the pursuit of power.
+                        As Darth Vader, Anakin played a crucial role in the execution of Order 66, a plan by Emperor Palpatine to eliminate the Jedi Order. He led the assault on the Jedi Temple and hunted down and killed many Jedi, including younglings.
+                        Anakin's transformation into Darth Vader led to a tragic turn of events. He believed that Padmé had betrayed him, and in a fit of rage during their confrontation, he used the Force to strangle her, unknowingly causing her death. This act deepened his descent into darkness.
+                        After a lightsaber duel with Obi-Wan Kenobi on the volcanic planet of Mustafar, Anakin was severely injured and left for dead. He was rescued by Emperor Palpatine and underwent extensive cybernetic enhancements and life-saving surgeries. These modifications included the iconic black suit, helmet, and breathing apparatus, which sustained his life.
+                        As Darth Vader, he became a formidable enforcer of the Galactic Empire. He led the Imperial Inquisitors in hunting down any remaining Jedi and suppressing rebellions against the Empire.
+                        Darth Vader was known for his ruthlessness and loyalty to Emperor Palpatine. He served as the Emperor's enforcer, helping to maintain the oppressive rule of the Galactic Empire. His reputation as a fearsome Sith Lord and enforcer spread throughout the galaxy.
+                        Despite his dark deeds, there remained a glimmer of light within Anakin Skywalker. This inner conflict eventually led to his redemption. In the end, he turned against the Emperor to save his son, Luke Skywalker, and was mortally wounded in the process.
+                    </p>
+                    <hr/>
+                </section>
+
+                <section>
+                    <h2>Sound</h2>
+                    <audio controls>
+                        <source src="audio/breathing.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p>
+                        The sound can be downloaded for free at pixabay.com
+                    </p>
+                    <hr/>
+                </section>
+
+                <section id="slideshow">
+                    <h2>Slideshow</h2>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 2</div>
+                          <img src="images/pic1.jpeg" style="width:100%">
+                          <div class="text">Anakin Skywalker</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 2</div>
+                          <img src="images/pic2.jpg" style="width:100%">
+                          <div class="text">Darth Vader</div>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                        </div>
+                        <br>
+                        
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span>
+                        </div>
+                    <hr/>
+                </section>
+
+                <section>
+                    <h2>Video</h2>
+                    <div class="video_container">
+                        <iframe src="https://www.youtube.com/embed/PT7-JdKhzcU?si=B-0iFPIsqrwQshVt"></iframe>
+                    <hr/>
+                </section>
+            </article>
+            <footer>
+                <p>This page was created by Asher &copy; 2023</p>
+            </footer>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+        </body>
+    </html>
